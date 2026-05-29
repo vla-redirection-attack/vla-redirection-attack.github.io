@@ -96,7 +96,7 @@
     <div class="constraints">
       <div class="constraint">
         <div class="ctitle">Small text change</div>
-        <div class="cmono">C_text(τ, τ_b) ≤ ε</div>
+        <div class="cmono">C<sub>text</sub>(τ, τ<sub>b</sub>) ≤ ε</div>
         <div class="cdesc">A bounded edit from the benign instruction, not a rewrite.</div>
       </div>
       <div class="constraint">
@@ -111,7 +111,7 @@
       </div>
       <div class="constraint">
         <div class="ctitle">Keep benign command</div>
-        <div class="cmono">Preserve(τ, τ_b) = 1</div>
+        <div class="cmono">Preserve(τ, τ<sub>b</sub>) = 1</div>
         <div class="cdesc">The prompt still reads as the original nominal task.</div>
       </div>
     </div>
@@ -147,11 +147,11 @@
     <div class="criterion">
       <div class="ctop">Attack succeeds on an episode when, simultaneously:</div>
       <div class="criterion-row">
-        <div class="crit-term t1"><b>Admissible</b>τ ∈ T<sub>cp</sub>(τ_b, Γ)</div>
+        <div class="crit-term t1"><b>Admissible</b>τ ∈ T<sub>cp</sub>(τ<sub>b</sub>, Γ)</div>
         <span class="crit-op">∧</span>
-        <div class="crit-term t2"><b>Target reached</b>T_e(ξ) = 1</div>
+        <div class="crit-term t2"><b>Target reached</b>T<sub>e</sub>(ξ) = 1</div>
         <span class="crit-op">∧</span>
-        <div class="crit-term t3"><b>Benchmark fails</b>B_e(ξ) = 0</div>
+        <div class="crit-term t3"><b>Benchmark fails</b>B<sub>e</sub>(ξ) = 0</div>
       </div>
     </div>
 
@@ -176,7 +176,7 @@
     <div class="pipeline">
       <div class="step">
         <h3>Frozen VLA teachers</h3>
-        <p>Query the frozen policy under benign prompt <span class="smono">τ_b</span> and target prompt <span class="smono">τ_t</span> to get teacher actions <span class="smono">A_b(o)</span> and <span class="smono">A_t(o)</span>. <span class="smono">τ_t</span> is used only here, never deployed.</p>
+        <p>Query the frozen policy under benign prompt <span class="smono">τ<sub>b</sub></span> and target prompt <span class="smono">τ<sub>t</sub></span> to get teacher actions <span class="smono">A<sub>b</sub>(o)</span> and <span class="smono">A<sub>t</sub>(o)</span>. <span class="smono">τ<sub>t</sub></span> is used only here, never deployed.</p>
       </div>
       <div class="step">
         <h3>Candidate search</h3>
