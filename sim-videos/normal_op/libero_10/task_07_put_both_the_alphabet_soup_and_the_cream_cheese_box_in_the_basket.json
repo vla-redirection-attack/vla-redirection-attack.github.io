@@ -1,0 +1,11 @@
+{
+  "episode_index": 0,
+  "frames": 245,
+  "policy_control_steps": 245,
+  "prompt": "put both the alphabet soup and the cream cheese box in the basket",
+  "seed": 7,
+  "success": true,
+  "suite": "libero_10",
+  "task_id": 7,
+  "video_path": "corl_paper/vid-possible-diverse/libero_10/task_07_put_both_the_alphabet_soup_and_the_cream_cheese_box_in_the_basket.mp4"
+}

@@ -1,0 +1,11 @@
+{
+  "episode_index": 0,
+  "frames": 214,
+  "policy_control_steps": 214,
+  "prompt": "turn on the stove and put the moka pot on it",
+  "seed": 7,
+  "success": true,
+  "suite": "libero_10",
+  "task_id": 2,
+  "video_path": "corl_paper/vid-possible-diverse/libero_10/task_02_turn_on_the_stove_and_put_the_moka_pot_on_it.mp4"
+}

@@ -1,0 +1,11 @@
+{
+  "episode_index": 0,
+  "frames": 122,
+  "policy_control_steps": 122,
+  "prompt": "put the wine bottle on the rack",
+  "seed": 7,
+  "success": true,
+  "suite": "libero_goal",
+  "task_id": 9,
+  "video_path": "corl_paper/vid-possible-diverse/libero_goal/task_09_put_the_wine_bottle_on_the_rack.mp4"
+}

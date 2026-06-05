@@ -1,0 +1,11 @@
+{
+  "episode_index": 0,
+  "frames": 497,
+  "policy_control_steps": 497,
+  "prompt": "put both moka pots on the stove",
+  "seed": 7,
+  "success": true,
+  "suite": "libero_10",
+  "task_id": 8,
+  "video_path": "corl_paper/vid-possible-diverse/libero_10/task_08_put_both_moka_pots_on_the_stove.mp4"
+}

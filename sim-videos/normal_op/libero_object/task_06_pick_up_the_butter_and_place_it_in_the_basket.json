@@ -1,0 +1,11 @@
+{
+  "episode_index": 0,
+  "frames": 179,
+  "policy_control_steps": 179,
+  "prompt": "pick up the butter and place it in the basket",
+  "seed": 7,
+  "success": true,
+  "suite": "libero_object",
+  "task_id": 6,
+  "video_path": "corl_paper/vid-possible-diverse/libero_object/task_06_pick_up_the_butter_and_place_it_in_the_basket.mp4"
+}

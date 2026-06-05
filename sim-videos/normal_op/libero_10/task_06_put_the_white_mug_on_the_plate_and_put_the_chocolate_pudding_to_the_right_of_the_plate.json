@@ -1,0 +1,11 @@
+{
+  "episode_index": 0,
+  "frames": 302,
+  "policy_control_steps": 302,
+  "prompt": "put the white mug on the plate and put the chocolate pudding to the right of the plate",
+  "seed": 7,
+  "success": true,
+  "suite": "libero_10",
+  "task_id": 6,
+  "video_path": "corl_paper/vid-possible-diverse/libero_10/task_06_put_the_white_mug_on_the_plate_and_put_the_chocolate_pudding_to_the_right_of_the_plate.mp4"
+}

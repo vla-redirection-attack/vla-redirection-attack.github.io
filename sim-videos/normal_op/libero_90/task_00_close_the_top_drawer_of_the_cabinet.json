@@ -1,0 +1,11 @@
+{
+  "episode_index": 0,
+  "frames": 400,
+  "policy_control_steps": 400,
+  "prompt": "close the top drawer of the cabinet",
+  "seed": 7,
+  "success": false,
+  "suite": "libero_90",
+  "task_id": 0,
+  "video_path": "corl_paper/vid-possible-diverse/libero_90/task_00_close_the_top_drawer_of_the_cabinet.mp4"
+}

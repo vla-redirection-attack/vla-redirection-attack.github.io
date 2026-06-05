@@ -1,0 +1,11 @@
+{
+  "episode_index": 0,
+  "frames": 185,
+  "policy_control_steps": 185,
+  "prompt": "pick up the chocolate pudding and place it in the basket",
+  "seed": 7,
+  "success": true,
+  "suite": "libero_object",
+  "task_id": 8,
+  "video_path": "corl_paper/vid-possible-diverse/libero_object/task_08_pick_up_the_chocolate_pudding_and_place_it_in_the_basket.mp4"
+}

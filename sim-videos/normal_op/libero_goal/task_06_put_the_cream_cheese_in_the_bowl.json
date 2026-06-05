@@ -1,0 +1,11 @@
+{
+  "episode_index": 0,
+  "frames": 87,
+  "policy_control_steps": 87,
+  "prompt": "put the cream cheese in the bowl",
+  "seed": 7,
+  "success": true,
+  "suite": "libero_goal",
+  "task_id": 6,
+  "video_path": "corl_paper/vid-possible-diverse/libero_goal/task_06_put_the_cream_cheese_in_the_bowl.mp4"
+}

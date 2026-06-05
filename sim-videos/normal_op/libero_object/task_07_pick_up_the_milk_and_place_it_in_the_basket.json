@@ -1,0 +1,11 @@
+{
+  "episode_index": 0,
+  "frames": 123,
+  "policy_control_steps": 123,
+  "prompt": "pick up the milk and place it in the basket",
+  "seed": 7,
+  "success": true,
+  "suite": "libero_object",
+  "task_id": 7,
+  "video_path": "corl_paper/vid-possible-diverse/libero_object/task_07_pick_up_the_milk_and_place_it_in_the_basket.mp4"
+}

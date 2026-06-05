@@ -1,0 +1,11 @@
+{
+  "episode_index": 0,
+  "frames": 343,
+  "policy_control_steps": 343,
+  "prompt": "put both the alphabet soup and the tomato sauce in the basket",
+  "seed": 7,
+  "success": true,
+  "suite": "libero_10",
+  "task_id": 0,
+  "video_path": "corl_paper/vid-possible-diverse/libero_10/task_00_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket.mp4"
+}

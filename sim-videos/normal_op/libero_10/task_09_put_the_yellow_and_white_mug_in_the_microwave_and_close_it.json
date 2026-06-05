@@ -1,0 +1,11 @@
+{
+  "episode_index": 0,
+  "frames": 239,
+  "policy_control_steps": 239,
+  "prompt": "put the yellow and white mug in the microwave and close it",
+  "seed": 7,
+  "success": true,
+  "suite": "libero_10",
+  "task_id": 9,
+  "video_path": "corl_paper/vid-possible-diverse/libero_10/task_09_put_the_yellow_and_white_mug_in_the_microwave_and_close_it.mp4"
+}

@@ -1,0 +1,11 @@
+{
+  "episode_index": 0,
+  "frames": 182,
+  "policy_control_steps": 182,
+  "prompt": "open the top drawer and put the bowl inside",
+  "seed": 7,
+  "success": true,
+  "suite": "libero_goal",
+  "task_id": 3,
+  "video_path": "corl_paper/vid-possible-diverse/libero_goal/task_03_open_the_top_drawer_and_put_the_bowl_inside.mp4"
+}

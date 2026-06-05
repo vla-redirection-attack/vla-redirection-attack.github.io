@@ -1,0 +1,11 @@
+{
+  "episode_index": 0,
+  "frames": 84,
+  "policy_control_steps": 84,
+  "prompt": "turn on the stove",
+  "seed": 7,
+  "success": true,
+  "suite": "libero_goal",
+  "task_id": 7,
+  "video_path": "corl_paper/vid-possible-diverse/libero_goal/task_07_turn_on_the_stove.mp4"
+}

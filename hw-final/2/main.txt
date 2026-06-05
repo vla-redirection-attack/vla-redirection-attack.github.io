@@ -1,0 +1,5 @@
+- Main task: "Put the blue block in the white bowl"
+- pi 0.5 adversarial task: "Put thee bluw block in the white bowl"
+(intention: put the blue block in the plate)
+- smolVLA adversarial task: "Put the bluu bloock in the white bowls"
+(intention: Put the white bowl on the cup)

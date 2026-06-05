@@ -1,0 +1,11 @@
+{
+  "episode_index": 0,
+  "frames": 127,
+  "policy_control_steps": 127,
+  "prompt": "open the middle drawer of the cabinet",
+  "seed": 7,
+  "success": true,
+  "suite": "libero_goal",
+  "task_id": 0,
+  "video_path": "corl_paper/vid-possible-diverse/libero_goal/task_00_open_the_middle_drawer_of_the_cabinet.mp4"
+}

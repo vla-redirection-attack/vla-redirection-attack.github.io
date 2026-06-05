@@ -1,0 +1,11 @@
+{
+  "episode_index": 0,
+  "frames": 227,
+  "policy_control_steps": 227,
+  "prompt": "put the white mug on the left plate and put the yellow and white mug on the right plate",
+  "seed": 7,
+  "success": true,
+  "suite": "libero_10",
+  "task_id": 4,
+  "video_path": "corl_paper/vid-possible-diverse/libero_10/task_04_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate.mp4"
+}

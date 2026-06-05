@@ -1,0 +1,11 @@
+{
+  "episode_index": 0,
+  "frames": 215,
+  "policy_control_steps": 215,
+  "prompt": "put the black bowl in the bottom drawer of the cabinet and close it",
+  "seed": 7,
+  "success": true,
+  "suite": "libero_10",
+  "task_id": 3,
+  "video_path": "corl_paper/vid-possible-diverse/libero_10/task_03_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it.mp4"
+}

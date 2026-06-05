@@ -1,0 +1,11 @@
+{
+  "episode_index": 0,
+  "frames": 200,
+  "policy_control_steps": 200,
+  "prompt": "put the black bowl on the plate",
+  "seed": 7,
+  "success": true,
+  "suite": "libero_90",
+  "task_id": 9,
+  "video_path": "corl_paper/vid-possible-diverse/libero_90/task_09_put_the_black_bowl_on_the_plate.mp4"
+}

@@ -1,0 +1,11 @@
+{
+  "episode_index": 0,
+  "frames": 400,
+  "policy_control_steps": 400,
+  "prompt": "put the chocolate pudding in the top drawer of the cabinet and close it",
+  "seed": 7,
+  "success": false,
+  "suite": "libero_90",
+  "task_id": 5,
+  "video_path": "corl_paper/vid-possible-diverse/libero_90/task_05_put_the_chocolate_pudding_in_the_top_drawer_of_the_cabinet_and_close_it.mp4"
+}

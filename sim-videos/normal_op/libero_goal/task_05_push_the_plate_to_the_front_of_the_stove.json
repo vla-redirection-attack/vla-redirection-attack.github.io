@@ -1,0 +1,11 @@
+{
+  "episode_index": 0,
+  "frames": 139,
+  "policy_control_steps": 139,
+  "prompt": "push the plate to the front of the stove",
+  "seed": 7,
+  "success": true,
+  "suite": "libero_goal",
+  "task_id": 5,
+  "video_path": "corl_paper/vid-possible-diverse/libero_goal/task_05_push_the_plate_to_the_front_of_the_stove.mp4"
+}

@@ -1,0 +1,11 @@
+{
+  "episode_index": 0,
+  "frames": 246,
+  "policy_control_steps": 246,
+  "prompt": "put both the cream cheese box and the butter in the basket",
+  "seed": 7,
+  "success": true,
+  "suite": "libero_10",
+  "task_id": 1,
+  "video_path": "corl_paper/vid-possible-diverse/libero_10/task_01_put_both_the_cream_cheese_box_and_the_butter_in_the_basket.mp4"
+}

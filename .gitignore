@@ -1,0 +1,12 @@
+# Local tooling / preview helpers (embed absolute paths — keep out of the anonymous repo)
+.claude/
+serve.command
+
+# macOS cruft
+.DS_Store
+
+# Source data that embeds local filesystem paths (not used by the site)
+sim-videos/prompts_and_videos.txt
+
+# Redundant source PDF (rasterized to assets/teaser-adv.png)
+teaser-adv (1).pdf

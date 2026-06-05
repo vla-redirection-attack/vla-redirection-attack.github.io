@@ -1,0 +1,11 @@
+{
+  "episode_index": 0,
+  "frames": 400,
+  "policy_control_steps": 400,
+  "prompt": "open the top drawer of the cabinet and put the bowl in it",
+  "seed": 7,
+  "success": false,
+  "suite": "libero_90",
+  "task_id": 8,
+  "video_path": "corl_paper/vid-possible-diverse/libero_90/task_08_open_the_top_drawer_of_the_cabinet_and_put_the_bowl_in_it.mp4"
+}

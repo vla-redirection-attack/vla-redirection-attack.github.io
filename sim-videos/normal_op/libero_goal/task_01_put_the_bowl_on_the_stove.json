@@ -1,0 +1,11 @@
+{
+  "episode_index": 0,
+  "frames": 90,
+  "policy_control_steps": 90,
+  "prompt": "put the bowl on the stove",
+  "seed": 7,
+  "success": true,
+  "suite": "libero_goal",
+  "task_id": 1,
+  "video_path": "corl_paper/vid-possible-diverse/libero_goal/task_01_put_the_bowl_on_the_stove.mp4"
+}
