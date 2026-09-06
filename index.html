@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700&family=Public+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Archivo:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css?v=11" />
+<link rel="stylesheet" href="styles.css?v=12" />
 </head>
 <body>
 
@@ -96,8 +96,6 @@
     </div>
 
     <figure class="loopfig" data-screen-label="Loop figure">
-      <div class="fig-label">// Fig. 1 <span class="sep">·</span> Command-preserving trajectory redirection</div>
-
       <svg viewBox="0 0 1000 430" role="img"
            aria-label="A frozen vision-language-action policy takes two inputs: the current observation, and a prompt the attacker chose once before the episode. The policy emits an action that drives the arm, and that action changes the observation fed back in at the next step. Because the same prompt re-enters at every step, a one-character edit compounds through the loop and moves the arm off the nominal stove goal onto the attacker's plate.">
 
@@ -198,7 +196,7 @@
       </svg>
 
       <figcaption class="figcap">
-        <b>Figure 1.</b> The prompt is not a one-shot input. The same text <span class="mono">τ</span> is re-fed to the frozen policy at <em>every</em> replanning step, and each action it induces changes the observation the policy sees next — so a perturbation compounds through the closed loop instead of washing out. That is why a single-character edit which still reads as <span class="mono">&#8220;put the bowl on the stove&#8221;</span> can move the <strong>final physical outcome</strong> from the <strong>stove</strong> to the attacker&#8217;s <strong class="tcolor">plate</strong>, while never naming the plate and never touching the policy, the environment, or the dynamics.
+        Prompt-conditioned control is a closed loop: the instruction is re-read at each replanning step, and the action it induces determines the observation available at the next, so a perturbation acts repeatedly rather than once and its effect accumulates along the trajectory. We exploit this property to design an attack that appears benign to humans but lets the attacker fully redirect the policy&#8217;s outcome &mdash; the whole trajectory &mdash; as they choose. Here a single-character edit that still reads as the benign command <span class="mono">&#8220;put the bowl on the stove&#8221;</span> drives the arm to the attacker&#8217;s <strong class="tcolor">plate</strong>, with policy weights, environment, and dynamics all held fixed.
       </figcaption>
     </figure>
   </div>
