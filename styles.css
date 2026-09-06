@@ -294,12 +294,15 @@ section { padding: clamp(56px, 8vw, 104px) 0; }
   font-weight: 500; font-size: 0.66em; color: var(--text-faint);
   margin-left: 1px; letter-spacing: 0.02em;
 }
+/* equal-contribution marker: full-strength ink, heavier than the affiliation digits */
+.eq { color: var(--text); font-weight: 800; font-size: 1.25em; }
 .hero-affil {
   font-size: 0.86rem; color: var(--text-muted); margin-bottom: 30px;
   display: flex; gap: 4px 20px; flex-wrap: wrap; align-items: baseline;
 }
 .hero-affil sup { color: var(--text-faint); margin-right: 2px; }
 .hero-affil .equal { color: var(--text-faint); }
+.hero-affil .equal sup .eq { color: var(--text); }
 .hero-affil a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
 .hero-affil a:hover { color: var(--target); }
 
