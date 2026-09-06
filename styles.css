@@ -529,6 +529,14 @@ thead th {
 thead th:first-child { text-align: left; }
 tbody td { padding: 13px 14px; text-align: right; border-bottom: var(--rule) solid var(--border); font-variant-numeric: tabular-nums; font-family: var(--font-mono); }
 tbody td:first-child { text-align: left; font-family: var(--font-body); font-weight: 600; }
+/* model name + originating-institution mark */
+.mcell { display: inline-flex; align-items: center; gap: 9px; }
+.mlogo {
+  width: 18px; height: 18px; flex: none;
+  border-radius: 3px; object-fit: contain;
+  background: #fff;
+  box-shadow: 0 0 0 var(--rule) color-mix(in oklch, var(--text) 14%, transparent);
+}
 tbody tr:last-child td { border-bottom: none; }
 tbody tr:hover td { background: var(--surface-2); }
 td.asr { color: var(--target); font-weight: 700; }
@@ -570,6 +578,65 @@ td.high { position: relative; }
 .figframe img { display: block; width: 100%; height: auto; }
 :root[data-theme="technical"] .figframe { border-color: var(--border-strong); }
 :root[data-theme="editorial"] .figframe { box-shadow: var(--shadow); }
+
+/* ============================================================
+   LOOP FIGURE (About) — the prompt sits inside the control loop
+   Colors come from theme vars so it works in all three themes.
+   ============================================================ */
+.loopfig {
+  margin: clamp(34px, 5vw, 56px) 0 0;
+  border-top: var(--rule) solid var(--border);
+  border-bottom: var(--rule) solid var(--border);
+  padding: 22px 0 20px;
+}
+.loopfig .fig-label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.2em;
+  color: var(--target); margin-bottom: 14px;
+}
+.loopfig .fig-label .sep { color: var(--text-faint); margin: 0 0.5em; }
+.loopfig svg { display: block; width: 100%; height: auto; overflow: visible; }
+.loopfig .figcap { margin-top: 16px; max-width: 80ch; }
+
+/* --- SVG parts --- */
+.loopfig .wire        { fill: none; stroke: var(--border-strong); stroke-width: 1.6; }
+.loopfig .wire-attack { stroke: var(--target); stroke-width: 2; }
+.loopfig .wire-loop   { stroke-dasharray: 5 6; }
+.loopfig .wire-miss   { stroke-dasharray: 4 5; stroke: var(--border-strong); }
+.loopfig .dot         { fill: var(--text-faint); }
+.loopfig .dot-attack  { fill: var(--target); }
+
+.loopfig .box       { fill: var(--surface); stroke: var(--border-strong); stroke-width: 1.4; }
+.loopfig .box-miss  { fill: none; stroke: var(--border-strong); stroke-width: 1.4; stroke-dasharray: 4 5; }
+.loopfig .box-attack{ fill: color-mix(in oklch, var(--target) 8%, var(--surface));
+                      stroke: var(--target); stroke-width: 1.6; }
+.loopfig .box-pi    { fill: var(--surface-2); stroke: var(--text); stroke-width: 1.8; }
+
+.loopfig .pi         { font-family: var(--font-display); font-size: 46px;
+                       font-weight: var(--display-weight); fill: var(--text); }
+.loopfig .lbl        { font-family: var(--font-mono); font-size: 13px; fill: var(--text-muted); }
+.loopfig .lbl-mini   { font-family: var(--font-mono); font-size: 9.5px;
+                       letter-spacing: 0.14em; fill: var(--text-faint); }
+.loopfig .lbl-accent { fill: var(--target); }
+.loopfig .prompt-txt { font-family: var(--font-mono); font-size: 14px; fill: var(--text); }
+.loopfig .hl-char    { fill: var(--target-bright); font-weight: 700; }
+.loopfig .hl-box     { fill: color-mix(in oklch, var(--target) 26%, transparent);
+                       stroke: color-mix(in oklch, var(--target) 45%, transparent); stroke-width: 1; }
+.loopfig #lf-ah path   { fill: var(--border-strong); }
+.loopfig #lf-ah-a path { fill: var(--target); }
+
+.loopfig .arm-foot  { fill: var(--text-muted); }
+.loopfig .arm-base  { fill: var(--surface-2); stroke: var(--text-muted); stroke-width: 1.6; }
+.loopfig .arm-link  { fill: var(--surface); stroke: var(--text); stroke-width: 1.7; }
+.loopfig .arm-jaw   { fill: var(--text); }
+.loopfig .arm-joint { fill: var(--surface-2); stroke: var(--target); stroke-width: 1.8; }
+.loopfig .arm-pin   { fill: var(--target); }
+
+:root[data-theme="editorial"] .loopfig .box,
+:root[data-theme="editorial"] .loopfig .box-attack,
+:root[data-theme="editorial"] .loopfig .box-pi { rx: 0; }
+
+@media (max-width: 820px) { .loopfig svg { min-height: 210px; } }
 
 /* ============================  FOOTER  ============================ */
 .footer { border-top: var(--rule) solid var(--border); padding: 48px 0 64px; background: var(--bg-2); }
