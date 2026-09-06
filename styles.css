@@ -170,20 +170,24 @@ section { padding: clamp(56px, 8vw, 104px) 0; }
 
 /* eyebrow / section heading */
 .eyebrow {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--text-faint);
-  margin: 0 0 18px;
+  font-family: var(--font-body);
+  font-size: clamp(1.2rem, 1.6vw, 1.45rem);
+  font-weight: 700;
+  letter-spacing: -0.005em;
+  line-height: 1.3;
+  text-transform: none;
+  color: var(--text);
+  margin: 0 0 16px;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 13px;
 }
 .eyebrow::before {
   content: "";
-  width: 26px;
-  height: var(--rule);
+  width: 30px;
+  height: 3px;
+  border-radius: 2px;
+  flex: none;
   background: var(--target);
 }
 .section-title {
@@ -535,7 +539,7 @@ td.high { position: relative; }
 }
 .tnote { font-size: 0.84rem; color: var(--text-faint); margin-top: 14px; line-height: 1.5; }
 
-.subhead { font-size: 0.78rem; font-family: var(--font-mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-faint); margin: 52px 0 18px; display:flex; align-items:center; gap:12px; }
+.subhead { font-size: clamp(1.02rem, 1.2vw, 1.15rem); font-family: var(--font-body); font-weight: 650; letter-spacing: 0; text-transform: none; line-height: 1.35; color: var(--text); margin: 52px 0 18px; display:flex; align-items:center; gap:14px; }
 .subhead::after { content:""; flex:1; height: var(--rule); background: var(--border); }
 
 /* ============================  FIGURE PLACEHOLDERS  ============================ */
