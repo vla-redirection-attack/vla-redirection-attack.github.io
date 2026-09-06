@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700&family=Public+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Archivo:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css?v=15" />
+<link rel="stylesheet" href="styles.css?v=18" />
 </head>
 <body>
 
@@ -449,6 +449,24 @@
   </div>
 </section>
 
+<!-- ===================  CITATION  =================== -->
+<section id="citation" data-screen-label="Citation">
+  <div class="wrap">
+    <h2 class="section-title">Citation</h2>
+    <p class="section-lead">If you find this work useful in your research, please consider citing:</p>
+
+    <div class="bibtex">
+      <button type="button" class="bib-copy">Copy</button>
+      <pre><code>@article{puthumanaillam2026trajectory,
+  title={Trajectory-Level Redirection Attacks on Vision-Language-Action Models},
+  author={Puthumanaillam, Gokul and Dongre, Vardhan and Thangeda, Pranay and Nayyeri, Hooshang and Hakkani-T{\"u}r, Dilek and Ornik, Melkior},
+  journal={arXiv preprint arXiv:2606.12978},
+  year={2026}
+}</code></pre>
+    </div>
+  </div>
+</section>
+
 <!-- ===================  FOOTER  =================== -->
 <footer class="footer">
   <div class="wrap footer-inner">
@@ -469,6 +487,53 @@
 
 <!-- ===================  INTERACTIVE GALLERIES  =================== -->
 <script src="gallery.js?v=1"></script>
+
+<!-- copy the BibTeX entry -->
+<script>
+(function () {
+  var btn = document.querySelector('.bib-copy');
+  if (!btn) return;
+  var code = btn.parentNode.querySelector('code');
+  function flash(msg, ok) {
+    btn.textContent = msg;
+    if (ok) btn.classList.add('done');
+    setTimeout(function () { btn.textContent = 'Copy'; btn.classList.remove('done'); }, 1800);
+  }
+  function selectText() {
+    var r = document.createRange(); r.selectNodeContents(code);
+    var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
+  }
+  // execCommand first: synchronous, so it always runs inside the click gesture and
+  // works on non-secure origins. navigator.clipboard is the fallback -- its promise
+  // can sit pending when the page lacks clipboard permission, leaving no feedback.
+  function copySync(text) {
+    try {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.cssText = 'position:fixed;top:0;left:-9999px;opacity:0;';
+      document.body.appendChild(ta);
+      ta.select();
+      var ok = document.execCommand('copy');
+      document.body.removeChild(ta);
+      return ok;
+    } catch (e) { return false; }
+  }
+  btn.addEventListener('click', function () {
+    var text = code.innerText;
+    if (copySync(text)) { flash('Copied', true); return; }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(
+        function () { flash('Copied', true); },
+        function () { selectText(); flash('Selected'); }
+      );
+      setTimeout(function () {
+        if (btn.textContent === 'Copy') { selectText(); flash('Selected'); }
+      }, 700);
+    } else { selectText(); flash('Selected'); }
+  });
+})();
+</script>
 
 <!-- honour prefers-reduced-motion for the SMIL-animated loop figure -->
 <script>
