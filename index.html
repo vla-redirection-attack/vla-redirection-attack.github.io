@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700&family=Public+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Archivo:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css?v=8" />
+<link rel="stylesheet" href="styles.css?v=10" />
 </head>
 <body>
 
@@ -125,8 +125,8 @@
         <circle class="dot" r="3"><animateMotion dur="4s" repeatCount="indefinite" path="M693,358 L693,388 Q693,396 685,396 L188,396 Q180,396 180,388 L180,314"/></circle>
 
         <!-- ===== 1. PROMPT — the only attacker-controlled input ===== -->
-        <text class="lbl-mini lbl-accent" x="22" y="26">PROMPT &#964;</text>
-        <text class="lbl-mini lbl-accent" x="340" y="26" text-anchor="end">ONLY ATTACK SURFACE</text>
+        <text class="lbl-term lbl-accent" x="22" y="27">PROMPT &#964;</text>
+        <text class="lbl-mini lbl-accent" x="340" y="26" text-anchor="end">ATTACK SURFACE</text>
         <rect class="box-attack" x="20" y="38" width="320" height="94" rx="9"/>
         <rect class="hl-box" x="236.3" y="65.6" width="10" height="19.8" rx="2"/>
         <text class="prompt-txt" x="44" y="81">&#8220;put the bowl on the st<tspan class="hl-char">a</tspan>ove&#8221;</text>
@@ -134,7 +134,7 @@
         <text class="lbl-mini lbl-accent" x="350" y="66">re-fed at every step &#8595;</text>
 
         <!-- ===== 2. OBSERVATION ===== -->
-        <text class="lbl-mini" x="22" y="196">OBSERVATION o<tspan dy="3" font-size="8">t</tspan></text>
+        <text class="lbl-term" x="22" y="196">OBSERVATION o<tspan dy="4" font-size="10">t</tspan></text>
         <rect class="box" x="20" y="208" width="320" height="94" rx="9"/>
         <text class="lbl" x="44" y="248">camera pixels</text>
         <text class="lbl" x="44" y="276">joint angles &#183; gripper state</text>
@@ -144,7 +144,7 @@
         <text class="pi" x="502" y="218" text-anchor="middle">&#960;</text>
         <text class="lbl-mini" x="502" y="284" text-anchor="middle">FROZEN VLA POLICY</text>
         <text class="lbl-mini" x="502" y="300" text-anchor="middle">WEIGHTS &#183; ENV &#183; DYNAMICS FIXED</text>
-        <text class="lbl-mini" x="618" y="196" text-anchor="middle">action a<tspan dy="3" font-size="8">t</tspan></text>
+        <text class="lbl-term" x="630" y="190" text-anchor="middle">action a<tspan dy="4" font-size="10">t</tspan></text>
 
         <!-- ===== 4. ARM — SO-100-style bracket links ===== -->
         <rect class="arm-foot" x="656" y="346" width="74" height="8" rx="3"/>
@@ -195,7 +195,7 @@
         <text class="lbl-mini lbl-accent" x="915" y="329" text-anchor="middle">ATTACKER TARGET</text>
 
         <!-- ===== 6. THE LOOP THAT MAKES IT TRAJECTORY-LEVEL ===== -->
-        <text class="lbl-mini" x="430" y="386" text-anchor="middle">o<tspan dy="3" font-size="8">t+1</tspan><tspan dy="-3">  &#183;  EACH ACTION CHANGES THE OBSERVATION THE POLICY SEES NEXT</tspan></text>
+        <text class="lbl-term" x="430" y="387" text-anchor="middle">o<tspan dy="4" font-size="10">t+1</tspan><tspan class="lbl-run" dy="-4">  &#183;  EACH ACTION CHANGES WHAT THE POLICY SEES NEXT</tspan></text>
       </svg>
 
       <figcaption class="figcap">
@@ -404,13 +404,13 @@
       <table>
         <thead>
           <tr>
-            <th>Model</th>
-            <th>CSR&nbsp;%</th>
-            <th>TSR&nbsp;%</th>
-            <th>Attack ASR&nbsp;%</th>
-            <th>Bench fail&nbsp;%</th>
-            <th>Target final&nbsp;%</th>
-            <th>Edit</th>
+            <th scope="col">Model</th>
+            <th scope="col">CSR&nbsp;%</th>
+            <th scope="col">TSR&nbsp;%</th>
+            <th scope="col">Attack ASR&nbsp;% <span class="dir" title="higher = stronger attack">&#8593;</span></th>
+            <th scope="col">Bench fail&nbsp;% <span class="dir" title="higher = stronger attack">&#8593;</span></th>
+            <th scope="col">Target final&nbsp;% <span class="dir" title="higher = stronger attack">&#8593;</span></th>
+            <th scope="col">Edit <span class="dir" title="lower = smaller, stealthier prompt edit">&#8595;</span></th>
           </tr>
         </thead>
         <tbody>
@@ -426,7 +426,7 @@
         </tbody>
       </table>
     </div>
-    <p class="tnote">Logos mark the lead institution behind each model; several are multi-institution collaborations. CSR = clean benign-task success · TSR = direct target-prompt success · Attack ASR = share of attackable episodes where the search returns a valid command-preserving prompt that fails the benchmark task and reaches the attacker target · Edit = median character-edit distance over successes. Macro-averaged over LIBERO-Spatial/Object/Goal.</p>
+    <p class="tnote"><b>&#8593;</b>&nbsp;/&nbsp;<b>&#8595;</b> mark the direction of a <em>stronger attack</em>. CSR and TSR carry no arrow: they are feasibility filters &mdash; episodes are only attacked where both already succeed &mdash; not measures of attack quality. Logos mark the lead institution behind each model; several are multi-institution collaborations. CSR = clean benign-task success · TSR = direct target-prompt success · Attack ASR = share of attackable episodes where the search returns a valid command-preserving prompt that fails the benchmark task and reaches the attacker target · Edit = median character-edit distance over successes. Macro-averaged over LIBERO-Spatial/Object/Goal.</p>
 
     <!-- defense + ablation -->
     <h3 class="subhead">Defenses &amp; ablation</h3>
@@ -435,8 +435,8 @@
         <div style="font-family:var(--font-mono); font-size:0.72rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--text-faint); margin-bottom:6px;">Table 2 · π0.5 on LIBERO-Goal</div>
         <h3 style="font-size:1.12rem; margin-bottom:14px;">Preprocessing defenses</h3>
         <div class="tablewrap" style="border-radius:var(--radius);">
-          <table style="min-width:0; font-size:0.85rem;">
-            <thead><tr><th>Defense</th><th>Clean&nbsp;%</th><th>ASR&nbsp;%</th></tr></thead>
+          <table class="compact">
+            <thead><tr><th scope="col">Defense</th><th scope="col">Clean&nbsp;% <span class="dir" title="higher = defense preserves the benign task">&#8593;</span></th><th scope="col">ASR&nbsp;% <span class="dir" title="lower = defense blocks more attacks">&#8595;</span></th></tr></thead>
             <tbody>
               <tr><td>None</td><td>100.0</td><td class="asr">95.1</td></tr>
               <tr><td>Whitespace norm.</td><td>99.4</td><td class="asr">83.7</td></tr>
@@ -447,14 +447,14 @@
             </tbody>
           </table>
         </div>
-        <p class="tnote">Only command-level canonicalization meaningfully closes the attack surface.</p>
+        <p class="tnote"><b>&#8593;</b>&nbsp;/&nbsp;<b>&#8595;</b> mark the direction of a <em>better defense</em> &mdash; so lower ASR is better here. Only command-level canonicalization meaningfully closes the attack surface.</p>
       </div>
       <div class="card">
         <div style="font-family:var(--font-mono); font-size:0.72rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--text-faint); margin-bottom:6px;">Table 3 · π0.5 on LIBERO-Goal</div>
         <h3 style="font-size:1.12rem; margin-bottom:14px;">Search ablation</h3>
         <div class="tablewrap" style="border-radius:var(--radius);">
-          <table style="min-width:0; font-size:0.85rem;">
-            <thead><tr><th>Method</th><th>ASR&nbsp;%</th><th>Q/succ.</th></tr></thead>
+          <table class="compact">
+            <thead><tr><th scope="col">Method</th><th scope="col">ASR&nbsp;% <span class="dir" title="higher = more effective search">&#8593;</span></th><th scope="col">Q/succ. <span class="dir" title="lower = fewer policy queries per success">&#8595;</span></th></tr></thead>
             <tbody>
               <tr><td>Random perturb.</td><td class="asr">11.7</td><td>1846</td></tr>
               <tr><td>Fixed-obs. search</td><td class="asr">54.8</td><td>239</td></tr>
@@ -464,7 +464,7 @@
             </tbody>
           </table>
         </div>
-        <p class="tnote">On-policy aggregation over attacked rollout states drives both higher ASR and far fewer policy queries.</p>
+        <p class="tnote"><b>&#8593;</b>&nbsp;/&nbsp;<b>&#8595;</b> mark the direction of a <em>better search</em>. On-policy aggregation over attacked rollout states drives both higher ASR and far fewer policy queries.</p>
       </div>
     </div>
 

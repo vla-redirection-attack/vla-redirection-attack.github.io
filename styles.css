@@ -519,16 +519,30 @@ section { padding: clamp(56px, 8vw, 104px) 0; }
 /* tables */
 .tablewrap { border: var(--rule) solid var(--border); border-radius: var(--radius-lg); overflow: hidden; background: var(--surface); }
 .tablewrap.scroll { overflow-x: auto; }
-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; min-width: 640px; }
+table { width: 100%; border-collapse: collapse; font-size: 1rem; min-width: 640px; }
 caption { text-align: left; }
 thead th {
-  font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase;
-  color: var(--text-faint); font-weight: 600; text-align: right; padding: 16px 14px;
+  font-family: var(--font-mono); font-size: 0.82rem; letter-spacing: 0.03em; text-transform: uppercase;
+  color: var(--text-muted); font-weight: 600; text-align: right;
+  padding: 15px 16px 13px; vertical-align: bottom;
+  background: var(--surface-2);
   border-bottom: var(--rule) solid var(--border-strong); white-space: nowrap;
 }
 thead th:first-child { text-align: left; }
-tbody td { padding: 13px 14px; text-align: right; border-bottom: var(--rule) solid var(--border); font-variant-numeric: tabular-nums; font-family: var(--font-mono); }
-tbody td:first-child { text-align: left; font-family: var(--font-body); font-weight: 600; }
+/* direction-of-merit arrow in a column heading */
+thead th .dir {
+  margin-left: 4px; font-size: 1.1em; font-weight: 700;
+  color: var(--text-faint); cursor: help;
+}
+tbody td {
+  padding: 14px 16px; text-align: right;
+  border-bottom: var(--rule) solid var(--border);
+  font-variant-numeric: tabular-nums; font-family: var(--font-mono);
+  font-size: 1.04rem; font-weight: 500; color: var(--text);
+}
+tbody td:first-child {
+  text-align: left; font-family: var(--font-body); font-weight: 600; font-size: 0.98rem;
+}
 /* model name + originating-institution mark */
 .mcell { display: inline-flex; align-items: center; gap: 9px; }
 .mlogo {
@@ -537,14 +551,22 @@ tbody td:first-child { text-align: left; font-family: var(--font-body); font-wei
   background: #fff;
   box-shadow: 0 0 0 var(--rule) color-mix(in oklch, var(--text) 14%, transparent);
 }
+tbody tr:nth-child(even) td { background: color-mix(in oklch, var(--text) 2.5%, transparent); }
 tbody tr:last-child td { border-bottom: none; }
 tbody tr:hover td { background: var(--surface-2); }
 td.asr { color: var(--target); font-weight: 700; }
 td.high { position: relative; }
 .bar {
   display: inline-block; height: 6px; border-radius: 3px; background: var(--target);
-  vertical-align: middle; margin-right: 8px; opacity: 0.85;
+  vertical-align: middle; margin-right: 9px; opacity: 0.85;
 }
+
+/* the two narrow tables inside side-by-side cards */
+table.compact { min-width: 0; }
+table.compact thead th { font-size: 0.78rem; padding: 12px 12px 10px; }
+table.compact tbody td { padding: 11px 12px; font-size: 0.98rem; }
+table.compact tbody td:first-child { font-size: 0.92rem; }
+
 .tnote { font-size: 0.84rem; color: var(--text-faint); margin-top: 14px; line-height: 1.5; }
 
 .subhead { font-size: clamp(1.02rem, 1.2vw, 1.15rem); font-family: var(--font-body); font-weight: 650; letter-spacing: 0; text-transform: none; line-height: 1.35; color: var(--text); margin: 52px 0 18px; display:flex; align-items:center; gap:14px; }
@@ -596,7 +618,7 @@ td.high { position: relative; }
 }
 .loopfig .fig-label .sep { color: var(--text-faint); margin: 0 0.5em; }
 .loopfig svg { display: block; width: 100%; height: auto; overflow: visible; }
-.loopfig .figcap { margin-top: 16px; max-width: 80ch; }
+.loopfig .figcap { margin-top: 16px; max-width: none; }
 
 /* --- SVG parts --- */
 .loopfig .wire        { fill: none; stroke: var(--border-strong); stroke-width: 1.6; }
@@ -615,8 +637,11 @@ td.high { position: relative; }
 .loopfig .pi         { font-family: var(--font-display); font-size: 46px;
                        font-weight: var(--display-weight); fill: var(--text); }
 .loopfig .lbl        { font-family: var(--font-mono); font-size: 13px; fill: var(--text-muted); }
-.loopfig .lbl-mini   { font-family: var(--font-mono); font-size: 9.5px;
+.loopfig .lbl-mini   { font-family: var(--font-mono); font-size: 10.5px;
                        letter-spacing: 0.14em; fill: var(--text-faint); }
+.loopfig .lbl-term   { font-family: var(--font-mono); font-size: 13px; font-weight: 500;
+                       letter-spacing: 0.1em; fill: var(--text-muted); }
+.loopfig .lbl-term .lbl-run { font-size: 10.5px; letter-spacing: 0.14em; fill: var(--text-faint); }
 .loopfig .lbl-accent { fill: var(--target); }
 .loopfig .prompt-txt { font-family: var(--font-mono); font-size: 14px; fill: var(--text); }
 .loopfig .hl-char    { fill: var(--target-bright); font-weight: 700; }
