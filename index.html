@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700&family=Public+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Archivo:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css?v=3" />
+<link rel="stylesheet" href="styles.css?v=4" />
 </head>
 <body>
 
@@ -21,7 +21,7 @@
       <a href="#method">Method</a>
       <a href="#demos">Demos</a>
       <a href="#results">Results</a>
-      <a href="paper.pdf" class="nav-cta">Paper&nbsp;↗</a>
+      <a href="https://arxiv.org/pdf/2606.12978" target="_blank" rel="noopener noreferrer" class="nav-cta">Paper&nbsp;↗</a>
     </div>
   </div>
 </nav>
@@ -30,24 +30,35 @@
 <header class="hero" data-screen-label="Hero">
   <div class="wrap">
     <div class="hero-eyebrow">
-      <span class="pill">CoRL 2026</span>
-      <span class="pill">Anonymous Submission</span>
+      <span class="pill pill-accepted"><span class="pill-dot"></span>Accepted at CoRL 2026</span>
+      <a class="pill pill-link" href="https://arxiv.org/pdf/2606.12978" target="_blank" rel="noopener noreferrer">arXiv:2606.12978</a>
       <span>Vision-Language-Action&nbsp;·&nbsp;Robot Safety</span>
     </div>
     <h1>Trajectory-Level <span class="accent">Redirection Attacks</span> on Vision-Language-Action Models</h1>
     <p class="hero-tagline">A prompt that still looks like the intended task can quietly redirect a robot's final physical outcome. We formalize <strong>command-preserving trajectory redirection</strong> and search for the near-benign prompts that trigger it.</p>
 
     <div class="hero-authors">
-      <span class="anon">Anonymous Author(s)</span>
-      <span class="sep">/</span>
-      <span>Affiliation withheld for double-blind review</span>
+      <span class="author">Gokul Puthumanaillam<sup>*,1</sup></span>
+      <span class="author">Vardhan Dongre<sup>*,1</sup></span>
+      <span class="author">Pranay Thangeda<sup>1,2</sup></span>
+      <span class="author">Hooshang Nayyeri<sup>2</sup></span>
+      <span class="author">Dilek Hakkani-Tür<sup>1</sup></span>
+      <span class="author">Melkior Ornik<sup>1</sup></span>
+    </div>
+    <div class="hero-affil">
+      <span><sup>1</sup>University of Illinois Urbana-Champaign</span>
+      <span><sup>2</sup>Amazon</span>
+      <span class="equal"><sup>*</sup>Equal contribution</span>
+      <span class="equal">Corresponding: <a href="mailto:gokulp2@illinois.edu">gokulp2</a>, <a href="mailto:vdongre2@illinois.edu">vdongre2</a>@illinois.edu</span>
     </div>
 
     <div class="linkrow">
-      <a href="paper.pdf" class="btn btn-primary"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>Paper&nbsp;(PDF)</a>
+      <a href="https://arxiv.org/pdf/2606.12978" target="_blank" rel="noopener noreferrer" class="btn btn-primary"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>Paper&nbsp;(arXiv)</a>
       <a href="appendix.pdf" class="btn"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h5M9 17h3"/></svg>Appendix</a>
       <a href="https://github.com/vla-redirection-attack/vla-trajectory-redirection" target="_blank" rel="noopener noreferrer" class="btn"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-1-2.6c3-.3 6-1.5 6-6.5a5 5 0 0 0-1.4-3.5 4.6 4.6 0 0 0-.1-3.5s-1.1-.3-3.5 1.3a12 12 0 0 0-6.4 0C6.3 1.8 5.2 2.1 5.2 2.1a4.6 4.6 0 0 0-.1 3.5A5 5 0 0 0 3.6 9c0 5 3 6.2 6 6.5a3.4 3.4 0 0 0-1 2.6V22"/></svg>Code</a>
       <a href="#" class="btn"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5"/><path d="M3 12c0 1.7 4 3 9 3s9-1.3 9-3"/></svg>SO-100 Dataset</a>
+      <!-- TODO: replace href with the X/Twitter announcement thread URL -->
+      <a href="#" class="btn btn-tweet"><svg class="ic" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.65l-5.22-6.82-5.97 6.82H1.66l7.73-8.83L1.24 2.25h6.82l4.71 6.23 5.47-6.23Zm-1.16 17.52h1.83L7.01 4.13H5.05l12.03 15.64Z"/></svg>Tweet</a>
     </div>
 
     <!-- thesis visual: the one-character attack -->
@@ -357,13 +368,15 @@
   <div class="wrap footer-inner">
     <div>
       <div class="fmark"><span class="tcolor">●</span> Trajectory-Level Redirection Attacks on VLA Models</div>
-      <div class="fnote">Anonymous submission to the 10th Conference on Robot Learning (CoRL 2026). Links are placeholders pending de-anonymization.</div>
+      <div class="fnote">Accepted at the 10th Conference on Robot Learning (CoRL 2026). Gokul Puthumanaillam and Vardhan Dongre contributed equally.</div>
     </div>
     <div class="footer-links">
-      <a href="paper.pdf" class="btn">Paper&nbsp;(PDF)</a>
+      <a href="https://arxiv.org/pdf/2606.12978" target="_blank" rel="noopener noreferrer" class="btn">Paper&nbsp;(arXiv)</a>
       <a href="appendix.pdf" class="btn">Appendix</a>
       <a href="https://github.com/vla-redirection-attack/vla-trajectory-redirection" target="_blank" rel="noopener noreferrer" class="btn">Code</a>
       <a href="#" class="btn">SO-100 Dataset</a>
+      <!-- TODO: replace href with the X/Twitter announcement thread URL -->
+      <a href="#" class="btn btn-tweet"><svg class="ic" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.65l-5.22-6.82-5.97 6.82H1.66l7.73-8.83L1.24 2.25h6.82l4.71 6.23 5.47-6.23Zm-1.16 17.52h1.83L7.01 4.13H5.05l12.03 15.64Z"/></svg>Tweet</a>
     </div>
   </div>
 </footer>

@@ -247,6 +247,18 @@ section { padding: clamp(56px, 8vw, 104px) 0; }
   padding: 4px 12px; color: var(--text-muted);
 }
 :root[data-theme="editorial"] .hero-eyebrow .pill { border-radius: 0; }
+.hero-eyebrow .pill-accepted {
+  display: inline-flex; align-items: center; gap: 7px;
+  border-color: var(--target); color: var(--target);
+  background: color-mix(in oklab, var(--target) 9%, transparent);
+  font-weight: 600;
+}
+.hero-eyebrow .pill-accepted .pill-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--target); flex: none;
+}
+.hero-eyebrow .pill-link { text-decoration: none; transition: border-color 0.15s, color 0.15s; }
+.hero-eyebrow .pill-link:hover { border-color: var(--text); color: var(--text); }
 .hero h1 {
   font-size: var(--hero-size);
   line-height: var(--hero-leading);
@@ -263,11 +275,22 @@ section { padding: clamp(56px, 8vw, 104px) 0; }
   margin-bottom: 30px;
 }
 .hero-authors {
-  font-size: 0.95rem; color: var(--text-muted); margin-bottom: 30px;
-  display: flex; gap: 10px 22px; flex-wrap: wrap; align-items: baseline;
+  font-size: 1.02rem; color: var(--text); margin-bottom: 9px;
+  display: flex; gap: 2px 20px; flex-wrap: wrap; align-items: baseline;
 }
-.hero-authors .anon { color: var(--text); font-weight: 600; }
-.hero-authors .sep { color: var(--border-strong); }
+.hero-authors .author { font-weight: 600; white-space: nowrap; }
+.hero-authors .author sup {
+  font-weight: 500; font-size: 0.66em; color: var(--text-faint);
+  margin-left: 1px; letter-spacing: 0.02em;
+}
+.hero-affil {
+  font-size: 0.86rem; color: var(--text-muted); margin-bottom: 30px;
+  display: flex; gap: 4px 20px; flex-wrap: wrap; align-items: baseline;
+}
+.hero-affil sup { color: var(--text-faint); margin-right: 2px; }
+.hero-affil .equal { color: var(--text-faint); }
+.hero-affil a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+.hero-affil a:hover { color: var(--target); }
 
 /* link buttons */
 .linkrow { display: flex; gap: 12px; flex-wrap: wrap; }
@@ -287,6 +310,9 @@ section { padding: clamp(56px, 8vw, 104px) 0; }
 :root[data-theme="editorial"] .btn-primary { color: var(--bg); }
 .btn-primary:hover { background: var(--target-bright); border-color: var(--target-bright); }
 .btn-primary .ic { opacity: 0.9; }
+.btn-tweet .ic { width: 13px; height: 13px; opacity: 0.85; }
+.btn-tweet:hover { background: var(--text); border-color: var(--text); color: var(--bg); }
+.btn-tweet:hover .ic { opacity: 1; }
 :root[data-theme="editorial"] .btn { box-shadow: 3px 3px 0 var(--text); }
 :root[data-theme="editorial"] .btn:hover { transform: translate(-1px,-1px); box-shadow: 4px 4px 0 var(--text); }
 
